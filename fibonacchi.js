@@ -16,10 +16,10 @@ function fiboSeries(number) {
     let fibo_Array = [0, 1];
     let j = 2;
     if (typeof number != 'number') {
-        console.log('Please give a number...');
+        // console.log('Please give a number...');
     }
     if (number < 2) {
-        console.log('Please give positive number which is greater than 0..');
+        // console.log('Please give positive number which is greater than 0..');
     }
     while (j < number) {
         fibo_Array[j] = fibo_Array[j - 1] + fibo_Array[j - 2];
@@ -27,5 +27,20 @@ function fiboSeries(number) {
     }
     return fibo_Array;
 }
-var result = fiboSeries(13);
-console.log(result);
+var result = fiboSeries(1);
+// console.log(result);
+
+// using recursion 
+function recursionFibo(n) {
+    if (n == 0) {
+        return 0;
+    }
+    else if (n == 1) {
+        return 1;
+    }
+    else {
+        return recursionFibo(n - 1) + recursionFibo(n - 2);
+    }
+}
+var r1 = recursionFibo(1);
+console.log(r1);
